@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "stage": "Code/Build/Test",
+  "exit_code": 0,
+  "controls": 51,
+  "positive_controls": 9,
+  "negative_controls": 42,
+  "current_tool_sha256": {
+    "source_transition_guard.py": "77fc009f5b63b61d024062339a75cdc5c0cf990c86089c1258962951f8e7b1e9",
+    "test_source_transition_guard.py": "c4414b8aba74c0db1fad4fed485fb8a90ce207de40e9f395b29be13ebd3aa577",
+    "split_repositories.py": "420c4817fb1e45729ecd04f15c4572c035d5eb7dcd331b12ce732a95d3bc8b40",
+    "map_repository_ownership.py": "1449dd8ce52049a240b79b9c0545d114e8da2f19426e62bd94fa5a0d19802ad5",
+    "build_repository_packages.py": "6c7e06bfe2bf2f83b0e14317c1695f81310dd531b875829574cc2ae303247ba7"
+  },
+  "control_log_sha256": "3697ab10ed8b951d49572c5ce2e0d6016ceefb0b5380cb1806675fa17406338c",
+  "baseline_sources": 52,
+  "original_current_bodies_unchanged": 47,
+  "original_current_bodies_transformed": 5,
+  "derived_retained_sources": 2,
+  "source_transitions_applied": 1,
+  "actual_client_source_locators": 10,
+  "actual_input_guards": 92,
+  "independent_review_initial": "source-transition-actual-review-20261010.json",
+  "review_findings": "3 initial findings plus downstream activation and exception journaling fixed; final independent recheck pending",
+  "limits": [
+    "Input integrity only; no semantic authority or runtime safety proof",
+    "Historical move/soulidity V8 excluded; original duty queue preserved",
+    "Original baseline hashes unchanged; transformations remain explicit"
+  ],
+  "actual_model_helper_after_initial_fix": {
+    "path": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/build-evidence/soulidity_model-native-leaf-guard-20261010/evidence.json",
+    "scope": "actualModel production pass/test0; not behavioral coverage; run before final activation-status patch; exact before-activation-fix tool copies retained"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "scope": "isolated mock of checker control flow; no real Move compile/tests, no RPC/signing or shared changes",
+  "checker_source": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/move-validation/verify_move_packages.py",
+  "checker_sha256": "1c88e71044c3b1d655b303d9e3bba374ca94e69e84b17bf51d28bab3c54e34cb",
+  "results": [
+    {
+      "case": "baseline",
+      "exit_code": 0,
+      "result": "PASS",
+      "source_and_manifest_unchanged": true
+    },
+    {
+      "case": "build_failure",
+      "exit_code": 1,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true
+    },
+    {
+      "case": "test_failure_exit",
+      "exit_code": 1,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true
+    },
+    {
+      "case": "missing_summary",
+      "exit_code": 1,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true
+    },
+    {
+      "case": "failed_test",
+      "exit_code": 1,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true
+    },
+    {
+      "case": "below_minimum",
+      "exit_code": 1,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true
+    },
+    {
+      "case": "changed_source",
+      "exit_code": 1,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": false
+    },
+    {
+      "case": "added_source",
+      "exit_code": 0,
+      "result": "PASS",
+      "source_and_manifest_unchanged": true
+    }
+  ]
+}

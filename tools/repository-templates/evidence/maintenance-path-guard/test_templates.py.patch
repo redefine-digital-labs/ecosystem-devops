@@ -1,0 +1,106 @@
+--- a/tools/repository-templates/test_templates.py
++++ b/tools/repository-templates/test_templates.py
+@@ -5,6 +5,7 @@
+ import hashlib
+ import json
+ from pathlib import Path
++import shutil
+ import subprocess
+ import sys
+ import tempfile
+@@ -17,6 +18,87 @@
+     if (result.returncode == 0) != (expected == 0):
+         raise AssertionError(f"unexpected result for {argv}: {result.stdout} {result.stderr}")
+     return result
++
++
++def test_maintenance_boundaries(out, configs, checks):
++    with tempfile.TemporaryDirectory(prefix="soulidity-maintenance-boundaries-") as temporary:
++        for original in configs:
++            repo = Path(temporary) / original["repository"]
++            shutil.copytree(out / original["repository"], repo)
++            config_file = repo / "module.json"
++            config = copy.deepcopy(original)
++            marker = repo / "product-command-ran"
++            (repo / "scripts/product_probe.py").write_text(
++                "from pathlib import Path\nPath('product-command-ran').write_text('ran')\n")
++            config["ci"]["product_commands"] = [{"id": "guard-control-flow-probe",
++                "argv": [sys.executable.split('/')[-1], "scripts/product_probe.py"]}]
++
++            def check(name, path, error=None, candidate=None, product=True):
++                config_file.write_text(json.dumps(candidate or config, ensure_ascii=False))
++                marker.unlink(missing_ok=True)
++                result = run([repo / "scripts/ci.py", "--changed-path", path,
++                              *(["--product"] if product else [])], expected=1 if error else 0)
++                if error:
++                    assert error in result.stderr, result.stderr
++                    assert not marker.exists(), "rejected path executed a product command"
++                    assert '"maintenance_contract": "passed"' not in result.stdout
++                else:
++                    summary = json.loads(result.stdout.splitlines()[-1])
++                    assert summary["maintenance_contract"] == "passed"
++                    assert summary["product_checks"] == ("passed" if product else "not_run_by_this_command")
++                    assert summary["remote_execution_or_deployment_verified"] is False
++                    assert marker.exists() is product
++                checks.append(f"{original['repository']}:{name}")
++
++            check("own_sources_allowed_before_product", "sources/owned.move")
++            check("structure_only_does_not_run_product", "sources/owned.move", product=False)
++            for path in [".deps/dependency/sources/readonly.move", "candidate-dependencies/pin/source.move",
++                         "evidence/extraction-original/baseline.move"]:
++                check(f"read_only_rejected:{path}", path, "changed path is read-only")
++            if original["module_id"] not in {"SDK", "CONTENT"}:
++                continue
++            for path in [".deps", "candidate-dependencies", "./.deps/source.move",
++                         ".deps//source.move"]:
++                check(f"read_only_alias_rejected:{path}", path, "changed path is read-only")
++            for path in ["../soul-market/sources/order.move", "sources/../../soul-market/order.move",
++                         str(repo.parent / "soul-market/sources/order.move"), "C:/soul-market/order.move"]:
++                check(f"external_path_rejected:{path}", path, "path escapes repository boundary")
++            narrow = copy.deepcopy(config)
++            narrow["write_boundary"]["writable_paths"] = ["sources/**"]
++            narrow["agent_contract"]["write_scope"]["paths"] = ["sources/**"]
++            check("narrow_own_sources_allowed", "./sources/owned.move", candidate=narrow)
++            check("outside_declared_scope_rejected", "docs/unowned.md",
++                  "changed path is outside module write scope", candidate=narrow)
++            (repo / "sources").mkdir()
++            (repo / "sources/unowned-alias").symlink_to("../docs", target_is_directory=True)
++            check("local_alias_outside_declared_scope_rejected", "sources/unowned-alias/unowned.md",
++                  "changed path is outside module write scope", candidate=narrow)
++            (repo / "sources/unowned-alias").unlink()
++            for field, path in [("non_writable_paths", "evidence/extraction-original/baseline.move"),
++                                ("read_only_dependency_paths", ".deps/source.move")]:
++                isolated = copy.deepcopy(config)
++                if field == "non_writable_paths":
++                    isolated["agent_contract"]["write_scope"]["read_only_dependency_paths"] = []
++                else:
++                    isolated["write_boundary"]["non_writable_paths"] = []
++                check(f"{field}_independently_enforced", path, "changed path is read-only", candidate=isolated)
++            invalid_deny = copy.deepcopy(config)
++            invalid_deny["agent_contract"]["write_scope"]["read_only_dependency_paths"] = ["../soul-market/**"]
++            check("external_deny_declaration_rejected", "sources/owned.move",
++                  "path escapes repository boundary", candidate=invalid_deny)
++            (repo / ".deps").mkdir()
++            (repo / "dependency-alias").symlink_to(".deps", target_is_directory=True)
++            check("local_alias_to_dependency_rejected", "dependency-alias/source.move", "changed path is read-only")
++            (repo / "dependency-alias").unlink()
++            (repo / "external-alias").symlink_to(repo.parent / "soul-market", target_is_directory=True)
++            check("symlink_to_other_repository_rejected", "external-alias/source.move", "changed path escapes repository boundary")
++            (repo / "external-alias").unlink()
++            if original["module_id"] == "CONTENT":
++                check("content_owned_package_alias_allowed", "packages/soulidity_content/sources/owned.move")
++                check("content_own_sources_allowed", "sources/soulidity_content/owned.move")
++                for prefix in ["packages/soulidity_standard", "packages/soulidity_foundation", "offline-vendor", "frozen-original"]:
++                    for path in [prefix, f"{prefix}/sources/readonly.move"]:
++                        check(f"content_dependency_rejected:{path}", path, "changed path is read-only")
+ 
+ 
+ def main():
+@@ -35,6 +117,7 @@
+     kinds = [p["kind"] for c in configs for p in c["pipelines"]]
+     assert kinds.count("ci") == 10 and kinds.count("version_release") == 9 and kinds.count("cross_repository_integration") == 1
+     checks = ["ten_artifacts_and_executable_contract_ci", "100_agent_fields_20_mappings_40_permissions_20_pipelines"]
++    test_maintenance_boundaries(out, configs, checks)
+     repo = out / "soul-sdk"
+     config_file = repo / "module.json"
+     baseline = config_file.read_bytes()

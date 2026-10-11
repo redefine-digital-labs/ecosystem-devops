@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "stage": "Code/Build/Test",
+  "exit_code": 0,
+  "controls": 19,
+  "positive_controls": 3,
+  "negative_controls": 16,
+  "current_tool_sha256": {
+    "source_transition_guard.py": "07e9ff45f227c2324561b3eb914c29f90c55c7810840f54ada40cc1596de6e3d",
+    "test_source_transition_guard.py": "af95988a7bfd62386d24f59d96697f8501d48e572448b9229dd0653f1859ca01",
+    "split_repositories.py": "e34ee0ded039298db288a4060bea9ff64149fd734134c1bbc6e57fa68581355b",
+    "map_repository_ownership.py": "2550519c644a94cfefbbc25d5fd3b5538c89aed3cbfa23ae17fd1046e1319e5c"
+  },
+  "baseline_sources": 52,
+  "source_transitions_applied": 0,
+  "limits": [
+    "Input integrity only; no semantic authority or runtime safety proof",
+    "Historical move/soulidity V8 excluded; original duty queue preserved",
+    "No source bodies or scope record state changed by tooling increment"
+  ]
+}

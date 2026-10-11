@@ -1,0 +1,202 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-10-10T13:51:21.944264+00:00",
+  "scope": "Read-only bounded source-transition/extraction helper correctness review; no whole-goal/security certification",
+  "scope_files": [
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/test_source_transition_guard.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/map_repository_ownership.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/workspace.json",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/source-authority.json",
+    "/Users/naoer/.codex/worktrees/soul-dof-v1-rebuild/soulidity/output/ecosystem-construction/repository-split-2026-10-10/native-custody-leaf/source-transition-registered.json"
+  ],
+  "actual_snapshot": {
+    "guard_errors": [],
+    "read_only_split_verify": {
+      "passed": true,
+      "local_git_repositories": 10,
+      "production_sources": 52,
+      "derived_production_sources": 2,
+      "errors": [],
+      "client_source_files": 10,
+      "remote_objects_created": 0,
+      "chain_cutovers": 0,
+      "not_proof_of": [
+        "business decoupling",
+        "deployed CI",
+        "independent upgrade authority",
+        "full product acceptance"
+      ]
+    },
+    "baseline_sources": 52,
+    "derived_sources": 2,
+    "expected_inputs": 82,
+    "current_authority_count": 54,
+    "active_whole_frozen_input_count": 17,
+    "active_whole_frozen_checks_all_pass": true,
+    "partial_frozen_input_count": 9,
+    "sdk_frozen_input_count": 10,
+    "partial_sdk_current_frozen_alias_checks_all_pass": true,
+    "metadata_unchanged": true,
+    "snapshot_sha256": {
+      "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py": "45a5e107bea141ee71a78a88891877022f2ebc7858ebbf2b05a345bd57d356ad",
+      "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/test_source_transition_guard.py": "ce97736abba8665abbb308542003a1ea898bfd8b4c3538df7706fb2b8a87cec1",
+      "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py": "8f52a72658fb7f03ba2ed982c4a39ed4f1d63077c7a1545a5d52463b6aa5a806",
+      "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/map_repository_ownership.py": "1449dd8ce52049a240b79b9c0545d114e8da2f19426e62bd94fa5a0d19802ad5",
+      "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py": "96584f26b2b690b30ca5ebe92116ef8703ce1d45b2644e25ab973e95e1f75cf7",
+      "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/workspace.json": "749201f65b71670dd70ca4e1f97b9328fa55b39c58a758e6b533864b29130084",
+      "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/source-authority.json": "8911e6457de2fb40db32b134618fbea40f341b4861d1eecc8272adffb154a896"
+    }
+  },
+  "registered_transition": {
+    "sha256": "80ce8d8881af0ecee5c7f148511f3c3252577a46ffe64fb04ea1b45859cac611",
+    "baseline_production_sources": 52,
+    "changed_production_sources": 5,
+    "changed_production_previous_sha_matches_baseline": 5,
+    "changed_inputs_total": 23,
+    "added_production_sources": 2,
+    "added_nonproduction_inputs": 4,
+    "sdk_aliases": 10
+  },
+  "control_counts": {
+    "existing_unit_controls": 23,
+    "existing_unit_controls_passed": 23,
+    "additional_temp_fixture_controls": 8,
+    "additional_positive_acceptance_controls": 1,
+    "additional_positive_acceptance_controls_passed": 1,
+    "additional_rejection_controls": 7,
+    "additional_rejection_controls_incorrectly_accepted": 7,
+    "total_offline_controls": 31
+  },
+  "additional_controls": [
+    {
+      "control": "whole_package_corrupted_frozen_recovery",
+      "expected": "reject",
+      "actual_passed": true,
+      "errors": []
+    },
+    {
+      "control": "sdk_frozen_symlink_to_current",
+      "expected": "reject",
+      "actual_passed": true,
+      "errors": []
+    },
+    {
+      "control": "sdk_frozen_same_file_as_current",
+      "expected": "reject",
+      "actual_passed": true,
+      "errors": []
+    },
+    {
+      "control": "partial_frozen_symlink_to_current",
+      "expected": "reject",
+      "actual_passed": true,
+      "errors": []
+    },
+    {
+      "control": "partial_frozen_same_file_as_current",
+      "expected": "reject",
+      "actual_passed": true,
+      "errors": []
+    },
+    {
+      "control": "build_latest_manifest_no_mutation",
+      "expected": "accept latest manifest and preserve baseline",
+      "exit_code": 0,
+      "test_exit_code": 0,
+      "baseline_preserved": true,
+      "evidence_manifest_matches_current": true,
+      "postbuild_guard_errors": [],
+      "command_has_install_dir": false
+    },
+    {
+      "control": "build_manifest",
+      "expected": "reject post-build drift",
+      "exit_code": 0,
+      "test_exit_code": 0,
+      "baseline_preserved": true,
+      "evidence_manifest_matches_current": false,
+      "postbuild_guard_errors": [
+        "Missing/changed current input: /private/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/build-transition-review-3hjvrxyz/pkg/Move.toml"
+      ],
+      "command_has_install_dir": false
+    },
+    {
+      "control": "build_lock",
+      "expected": "reject post-build drift",
+      "exit_code": 0,
+      "test_exit_code": 0,
+      "baseline_preserved": true,
+      "evidence_manifest_matches_current": true,
+      "postbuild_guard_errors": [
+        "Missing/changed current input: /private/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/build-transition-review-0x_f69pu/pkg/Move.lock"
+      ],
+      "command_has_install_dir": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "ST-1",
+      "priority": "P1",
+      "title": "Active whole-package frozen baseline is not verified",
+      "locations": [
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py",
+          "lines": "127-135"
+        },
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py",
+          "lines": "16-23,70-74"
+        }
+      ],
+      "observed": "Current verification does not inspect packages[].frozen_before against baseline_inputs. A cloned active-package fixture with corrupted frozen source and manifest passes split.verify with no errors. The same recovery bytes are outside source_inputs unless individually named by a transition.",
+      "required_fix": "Verify every active package recovery input against original baseline_inputs as a regular, independent recovery file. Reject changed, missing, symlinked or current-alias recovery before build/verify acceptance.",
+      "actual_workspace": "All17 active whole-package frozen input files currently match their baseline SHA and are regular independent files."
+    },
+    {
+      "id": "ST-2",
+      "priority": "P1",
+      "title": "SDK and partial recovery can alias mutable current source",
+      "locations": [
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py",
+          "lines": "136-155"
+        }
+      ],
+      "observed": "The partial and SDK checks validate frozen is_file+SHA but do not reject symlinks or frozen.resolve()==current.resolve(). Both sections accept a frozen symlink to the current source and frozen_before set to the current source itself;4 cloned fixtures pass.",
+      "required_fix": "Require frozen recovery regular files and reject current-file aliases for both sections. Keep original forwarding alias and unique canonical authority checks.",
+      "actual_workspace": "All9 partial recovery files and10 SDK recovery files currently have matching SHA, regular independent recovery files, and correct original forwarding symlinks."
+    },
+    {
+      "id": "ST-3",
+      "priority": "P1",
+      "title": "Build success can be recorded after registered input drift",
+      "locations": [
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py",
+          "lines": "23-25,36-47,52-64"
+        }
+      ],
+      "observed": "source_inputs and candidate hashes are checked only before build. A fake local tool mutating registered Move.toml or Move.lock during build/test produces exit0/test0 accepted evidence and updates the workspace build pointer; a postbuild source_inputs then rejects the changed input. The Move.toml fixture also records a candidate SHA that differs from the actual final manifest.",
+      "required_fix": "Use an isolated build/install directory for build and test; check the full registered current/frozen inputs again after both commands and before success/evidence acceptance. Bind evidence to the current expected inputs used for the graph; preserve original candidate and52-row baseline SHA.",
+      "qualification": "Observed commands contain no --install-dir. This review proves missing post-tool guard with an offline fake tool; it does not assert that an actual Sui invocation mutated any source or lock."
+    }
+  ],
+  "pending": [
+    "source-authority.json snapshot still has derived_production_sources_count0; root intends regeneration after actual Native import, so this is pending and not a defect finding"
+  ],
+  "boundaries": {
+    "source_writes": 0,
+    "workspace_evidence_metadata_writes": 0,
+    "actual_sui_invocations": 0,
+    "network_operations": 0,
+    "commits": 0,
+    "pushes": 0,
+    "remotes": 0,
+    "chain_operations": 0,
+    "signatures": 0
+  },
+  "method": "Existing unittest controls ran with python3 -B. Actual split.verify ran in process with put intercepted to an in-memory sink, leaving verification.json untouched; hashes of actual workspace/source-authority stayed unchanged. Adversarial controls used only new temporary files and cloned minimal metadata. Fake Sui executable was local and offline."
+}

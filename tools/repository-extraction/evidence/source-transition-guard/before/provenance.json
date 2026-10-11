@@ -1,0 +1,7 @@
+{
+  "split_repositories.py": "copied directly before first guard edit",
+  "map_repository_ownership.py": "copied directly before first guard edit",
+  "module.json": "copied directly before guard registration",
+  "build_repository_packages.py": "reconstructed from exactly known minimal initial patch, not a direct before-file capture",
+  "direct_before_review_fix": "../before-review-fix contains exact copies of all five files before fixing independent findings"
+}

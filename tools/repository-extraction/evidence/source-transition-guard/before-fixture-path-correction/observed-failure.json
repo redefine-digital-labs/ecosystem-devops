@@ -1,0 +1,11 @@
+{
+  "control_execution": "first51 run",
+  "total": 51,
+  "passed": 50,
+  "errors": 1,
+  "test": "test_activation_accepts_current_registered_manifest",
+  "failure": "fixture target /var path was not canonical /private/var, final locator comparison rejected it after successful activation",
+  "scope": "temporary fixture only; no actual source move or product failure",
+  "raw_initial_log_retained": false,
+  "resolution": "resolve temporary fixture root exactly as real CLI resolves workspace/source args"
+}

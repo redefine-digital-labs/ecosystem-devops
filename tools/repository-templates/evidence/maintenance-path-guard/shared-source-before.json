@@ -1,0 +1,22 @@
+{
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/module.json": "ee5604e8db0271bdfadb09ed3faee70e50aa140a2a566c1d27b95f9f5a12faf8",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-integration/module.json": "d00c526df314d1d825d222248b283e565e28a9ff3d4bed0069cbe34446f22427",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-integration/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/maker-protocol/module.json": "ad5b89f457587eca5b9b91c9caa825e017c4faf777f8dff4ee99f4dafe2f2c14",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/maker-protocol/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-channel/module.json": "079472459319a65d4b1ecb1e939c824a99579a4851d06ce72a033131862c84f2",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-channel/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-community/module.json": "a309fd18550f1e1d14aa14ee97f6ac35c7ee250493f78c7798ec8342af840274",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-community/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-content/module.json": "4c965ce2c2a1b4dccb59eff88fc0d566ac7024d38a4ce0d68a9915376fca8339",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-content/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-extensions/module.json": "d1604013ca664cf995c13a9e80b5cc4b6499c5dabb81015ede69e95f42110f15",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-extensions/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-market/module.json": "8b6daae82cbaca54e20811cd0056429ffe62f30f597c1a16b40b46160e76b924",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-market/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-sdk/module.json": "94d78c9c5e05f08ffa76c9a11f952515a19c980411e9748466c10e131531f4fa",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-sdk/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-standard/module.json": "ed5de4d703945334ae5635e93783f4ed9f578c84b515a2bf95990019b7217286",
+  "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-standard/scripts/ci.py": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f"
+}

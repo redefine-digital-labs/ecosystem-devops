@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "temporary_output": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-ten-repo-check-g8ma5ivs/repositories",
+  "checks": [
+    "ten_artifacts_and_executable_contract_ci",
+    "100_agent_fields_20_mappings_40_permissions_20_pipelines",
+    "missing_agent_field_rejected",
+    "cross_repository_write_scope_rejected",
+    "cross_repository_changed_path_rejected",
+    "upgrade_role_is_not_runtime_authority",
+    "pending_identity_cannot_impersonate_account",
+    "missing_stage_evidence_rejected",
+    "unregistered_product_checks_rejected",
+    "pending_release_rejected",
+    "self_review_cannot_be_independent_acceptance",
+    "repeat_generation_does_not_overwrite",
+    "receipt_detects_altered_generated_artifact",
+    "receipt_module_identity_drift_rejected"
+  ],
+  "checks_count": 14,
+  "repositories": 10,
+  "deliverable_categories": 60,
+  "actual_git_remote_chain_or_product_tests": false,
+  "source_provenance": {
+    "spec": {
+      "path": "docs/SOULIDITY_ECOSYSTEM_MODULARIZATION_SPEC_CN.md",
+      "sha256": "23e089e0ea125d0d20c93d710cd826b3ff471efae61d1d4d4f892e5ff667453c"
+    },
+    "agent_fields": {
+      "path": "docs/SOULIDITY_CONTRACT_MODULES_AND_PERMISSION_BOUNDARIES_CN.md",
+      "sha256": "69562cc9099980bf56342963dc3c1c19df182ace0b530565cd9c58af19fb28c6"
+    },
+    "plan": {
+      "path": "docs/open-ecosystem/MODULE_DELIVERY_PLAN.json",
+      "sha256": "d5a29cced52ca873bfc63330f8bb1dad09c7966d8dc7c0c192ceb17d3146febb"
+    },
+    "contracts": {
+      "path": "docs/open-ecosystem/MODULE_INTEROPERABILITY_CONTRACTS.json",
+      "sha256": "4d1db51a912726e88299453115673365a13587f823e3d6387a5d460dd63952fc"
+    },
+    "scope": {
+      "path": "docs/open-ecosystem/ORIGINAL_SCOPE_TRACE.json",
+      "sha256": "f60284b600712201b972a23a6582ddd2e01c127d8759e5dc8d51d4c473c42110"
+    },
+    "registry": {
+      "path": "agent-management/workspace.json",
+      "sha256": "bf54424842188fd92569c06c88bb2e507f5d46ef00b5b73a19ee6ac60bdb6efd"
+    },
+    "operating_model": {
+      "path": "agent-management/OPERATING_MODEL.md",
+      "sha256": "183dd9414229552d5be72e8077503109b48edb6008d6661eaf336c9475a4af43"
+    },
+    "handbook": {
+      "path": "agent-management/PRODUCT_ENGINEERING_HANDBOOK_CN.md",
+      "sha256": "1972858dffa38006f1d3784bcaca9370c52bdebade730b20bb0294b42125ec95"
+    }
+  }
+}

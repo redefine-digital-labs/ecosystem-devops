@@ -1,0 +1,33 @@
+--- a/tools/repository-templates/generate.py
++++ b/tools/repository-templates/generate.py
+@@ -84,6 +84,10 @@
+             "reason": None if applicable else ("工具仓无业务链上控制" if tool and category == "onchain_control" else "Integration不另设版本发布"),
+             "effective_authority_paths": [], "actual_holder": None, "authorization_ref": None, "evidence": []})
+     pipeline = "cross_repository_integration" if module == "INTEGRATION" else "version_release"
++    dependency_paths = [".deps/**", "candidate-dependencies/**"]
++    if module == "CONTENT":
++        dependency_paths += ["packages/soulidity_standard/**", "packages/soulidity_foundation/**",
++                             "offline-vendor/**", "frozen-original/**"]
+     return {
+         "schema_version": "1.0", "module_id": module, "repository": plan["repository"],
+         "nature": contract["nature"], "purpose": contract["purpose"],
+@@ -101,7 +105,8 @@
+         "write_boundary": {"repository_only": True, "writable_paths": ["**"],
+             "owned_semantic_units": contract["semantic_units"], "cross_repository_edits": "forbidden",
+             "source_authority_switch": "pending_single_writer_cutover",
+-            "external_shared_resources": "exclusive_holder_required; worktree does not isolate wallet/deployment/state"},
++            "external_shared_resources": "exclusive_holder_required; worktree does not isolate wallet/deployment/state",
++            "non_writable_paths": [".deps/**", "candidate-dependencies/**", "evidence/extraction-original/**"]},
+         "engineering_capabilities": {"provided_interfaces_design": contract["provided_interfaces"],
+             "selected_dependencies_design": contract["selected_dependencies"],
+             "prohibited_dependencies": contract["prohibited_dependencies"],
+@@ -111,7 +116,8 @@
+         "agent_contract": {
+             "identity": {"module": module, "role_recommendation": plan["maintenance_role_mapping_recommended"], "actual_identity": None, "status": "pending"},
+             "responsibilities": contract["purpose"],
+-            "write_scope": {"repository": plan["repository"], "paths": ["**"], "cross_repository": "forbidden"},
++            "write_scope": {"repository": plan["repository"], "paths": ["**"], "cross_repository": "forbidden",
++                            "read_only_dependency_paths": dependency_paths},
+             "inputs_outputs": {"inputs": ["fixed_candidate", "original_record", "declared_dependencies"], "outputs": ["module_artifact", "verification_evidence", "original_record_attachment"]},
+             "tool_identity": {"status": "pending", "actual_accounts": [], "runtime_session": None},
+             "permissions": {"source": "bounded_current_task_only", "publish_deploy_sign_spend_external_message": "requires_existing_explicit_authorization", "authority": contract["authority"]},

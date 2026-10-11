@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "repository": "soul-sdk",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"SDK\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "ecosystem-devops",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"DEVOPS\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "ecosystem-integration",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"INTEGRATION\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-standard",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"STANDARD\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-content",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"CONTENT\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-community",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"COMMUNITY\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "maker-protocol",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"MAKER\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-channel",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"CHANNEL\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-market",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"MARKET\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-extensions",
+      "exit_code": 0,
+      "stdout": "{\"module\": \"EXTENSIONS\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}",
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "product_checks_run": false,
+  "remote_execution": false
+}

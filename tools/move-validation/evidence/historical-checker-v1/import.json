@@ -1,0 +1,5 @@
+{
+  "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/community-migration-review-l5dwb_5f/checker-control-flow-review.json",
+  "sha256": "4b1a43daf5df7194b169da86082d816cb592f00b1f32303903f65f382a3f8d5f",
+  "method": "isolated control-flow and CLI argument mock, no real Sui execution"
+}

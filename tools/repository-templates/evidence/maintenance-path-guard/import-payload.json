@@ -1,0 +1,100 @@
+{
+  "scope": "maintenance-path-guard-only",
+  "target_count": 13,
+  "targets": [
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-templates/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/before-install/tools/repository-templates/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/generate.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-templates/generate.py",
+      "sha256": "6a23f0e2b60dca8ef488009931061aa5e4669df4ace67762b08cf9ac586c8d4b",
+      "expected_before_sha256": "067c8a888d6f4fd5d0a3c86959f3f7f485ba9f9a6088c72b32bbdb2fea26bbe1",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/before-install/tools/repository-templates/generate.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/test_templates.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-templates/test_templates.py",
+      "sha256": "3d82b4d6fd5f939a939ea472df7be5d1f3a9f01c1b61f7a134ef3f1b51d2c1e4",
+      "expected_before_sha256": "fa02359d2daad2d221291047babcbf20e3e975104f6b702a28be010ff6e14431",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/before-install/tools/repository-templates/test_templates.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/ecosystem-devops/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-integration/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/ecosystem-integration/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/maker-protocol/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/maker-protocol/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-channel/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/soul-channel/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-community/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/soul-community/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-content/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/soul-content/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-extensions/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/soul-extensions/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-market/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/soul-market/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-sdk/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/soul-sdk/scripts/ci.py"
+    },
+    {
+      "source": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/candidate/tools/repository-templates/ci.py",
+      "target": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/soul-standard/scripts/ci.py",
+      "sha256": "ed37e5d333b0666879b43f7dde19494f80f117d5f9abb6865b78ffa9857accc3",
+      "expected_before_sha256": "ae81684b2bf5748f2b578cc69cc53fbe954ce5278a895b3d7ce902428a6eb54f",
+      "preserved_before": "/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-guard-opmcuuxq/actual-before-install/soul-standard/scripts/ci.py"
+    }
+  ],
+  "shared_sources_written": false,
+  "chain_network_product_validation": false,
+  "optional_generator_and_tests_independent_from_ci": true
+}

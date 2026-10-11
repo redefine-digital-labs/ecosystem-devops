@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "scripts/ci.py",
+    "--product"
+  ],
+  "exit": 0,
+  "log": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/evidence/source-transition-guard/actual-product-ci.log",
+  "log_sha256": "2e8dde814e55c809cd7d9a0d24c87f08091a6ed821e16fbe3d85f79e1505c600",
+  "controls": 43,
+  "remote_execution": false,
+  "semantic_business_acceptance": false
+}

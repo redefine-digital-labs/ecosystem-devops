@@ -1,0 +1,24 @@
+test_adapter_and_added_implementation (__main__.TransitionControls) ... ok
+test_added_source_changes_after_capture (__main__.TransitionControls) ... ok
+test_bad_previous_hash (__main__.TransitionControls) ... ok
+test_derived_aliases_original (__main__.TransitionControls) ... ok
+test_duplicate_derived_authority (__main__.TransitionControls) ... ok
+test_duplicate_output (__main__.TransitionControls) ... ok
+test_duplicate_transition_identity (__main__.TransitionControls) ... ok
+test_manifest_hash_mismatch (__main__.TransitionControls) ... ok
+test_missing_manifest (__main__.TransitionControls) ... ok
+test_output_changes_after_capture (__main__.TransitionControls) ... ok
+test_recovery_aliases_output (__main__.TransitionControls) ... ok
+test_recovery_changes (__main__.TransitionControls) ... ok
+test_recovery_is_missing (__main__.TransitionControls) ... ok
+test_recovery_symlink (__main__.TransitionControls) ... ok
+test_two_sequential_transformations (__main__.TransitionControls) ... ok
+test_unchanged_baseline (__main__.TransitionControls) ... ok
+test_unmapped_new_module (__main__.TransitionControls) ... ok
+test_unmapped_new_package (__main__.TransitionControls) ... ok
+test_unrecorded_mutation (__main__.TransitionControls) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.033s
+
+OK

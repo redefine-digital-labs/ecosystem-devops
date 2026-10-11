@@ -1,0 +1,3 @@
+template verification failed: unexpected result for [PosixPath('/var/folders/p7/xnbbfd1d3l12fp_fmj7bz85w0000gn/T/soulidity-maintenance-boundaries-rpr4yiak/soul-sdk/scripts/ci.py'), '--changed-path', '.deps/dependency/sources/readonly.move', '--product']: {"command_id": "guard-control-flow-probe", "argv": ["python3", "scripts/product_probe.py"], "returncode": 0, "stdout": "", "stderr": ""}
+{"module": "SDK", "maintenance_contract": "passed", "product_checks": "passed", "release_materials": "not_checked", "remote_execution_or_deployment_verified": false}
+ 

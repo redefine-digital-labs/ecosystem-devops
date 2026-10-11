@@ -1,0 +1,73 @@
+--- a/tools/repository-templates/ci.py
++++ b/tools/repository-templates/ci.py
+@@ -4,7 +4,7 @@
+ import fnmatch
+ import hashlib
+ import json
+-from pathlib import Path, PurePosixPath
++from pathlib import Path, PurePosixPath, PureWindowsPath
+ import subprocess
+ import sys
+ 
+@@ -32,7 +32,8 @@
+ def safe_relative(value, allow_pattern=False):
+     require(isinstance(value, str) and bool(value), "path must be a nonempty string")
+     path = PurePosixPath(value)
+-    require(not path.is_absolute() and ".." not in path.parts and "\\" not in value,
++    require(not path.is_absolute() and not PureWindowsPath(value).drive and
++            ".." not in path.parts and "\\" not in value,
+             f"path escapes repository boundary: {value}")
+     require(path.parts and path.parts[0] != ".git", "Git internals are outside declared write scope")
+     if not allow_pattern:
+@@ -48,6 +49,34 @@
+         require(isinstance(assignment["actual_identity"], str) and assignment["actual_identity"].strip(),
+                 f"confirmed {label} needs an actual identity")
+         require(assignment["evidence"], f"confirmed {label} requires identity assignment evidence")
++
++
++def matches_path(path, pattern):
++    # A recursive directory declaration also protects the directory itself.
++    return fnmatch.fnmatchcase(path, pattern) or (pattern.endswith("/**") and path == pattern[:-3])
++
++
++def validate_write_paths(root, config, changed_paths):
++    boundary = config["write_boundary"]
++    scope = config["agent_contract"]["write_scope"]
++    require(boundary["writable_paths"], "write boundary must declare allowed repository paths")
++    require(boundary["writable_paths"] == scope["paths"], "Agent and module write scopes differ")
++    allowed = [str(safe_relative(p, allow_pattern=True)) for p in boundary["writable_paths"]]
++    denied = [str(safe_relative(p, allow_pattern=True)) for p in
++              boundary.get("non_writable_paths", []) + scope.get("read_only_dependency_paths", [])]
++    repository_root = root.resolve()
++    for changed in changed_paths:
++        relative = str(safe_relative(changed))
++        resolved = (repository_root / relative).resolve()
++        require(resolved.is_relative_to(repository_root), f"changed path escapes repository boundary: {changed}")
++        # Check both the declared path and its target, so local aliases cannot
++        # turn a read-only dependency or an out-of-scope file into writable source.
++        target = str(safe_relative(resolved.relative_to(repository_root).as_posix()))
++        for path in {relative, target}:
++            require(not any(matches_path(path, p) for p in denied),
++                    f"changed path is read-only: {changed}")
++            require(any(matches_path(path, p) for p in allowed),
++                    f"changed path is outside module write scope: {changed}")
+ 
+ 
+ def validate_structure(root, config, changed_paths):
+@@ -63,15 +92,7 @@
+     boundary = config["write_boundary"]
+     require(boundary["repository_only"] is True and boundary["cross_repository_edits"] == "forbidden",
+             "write authority must be limited to this repository")
+-    require(boundary["writable_paths"], "write boundary must declare allowed repository paths")
+-    for pattern in boundary["writable_paths"] + config["agent_contract"]["write_scope"]["paths"]:
+-        safe_relative(pattern, allow_pattern=True)
+-    require(boundary["writable_paths"] == config["agent_contract"]["write_scope"]["paths"],
+-            "Agent and module write scopes differ")
+-    for changed in changed_paths:
+-        safe_relative(changed)
+-        require(any(fnmatch.fnmatchcase(changed, p) for p in boundary["writable_paths"]),
+-                f"changed path is outside module write scope: {changed}")
++    validate_write_paths(root, config, changed_paths)
+     for path in root.rglob("*"):
+         if path.is_symlink():
+             require(path.resolve().is_relative_to(root.resolve()), f"symlink escapes repository: {path.relative_to(root)}")

@@ -1,0 +1,297 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-10-10T13:58:08.438451+00:00",
+  "scope": "Read-only bounded follow-up to ST-1/ST-2/ST-3; offline integrity only, no full security/CI/deploy acceptance",
+  "scope_files": [
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/test_source_transition_guard.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/map_repository_ownership.py",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py"
+  ],
+  "before_review_sha256": {
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py": "4565882ce40ab0a5db3b4a40a3451a36baa533527ddd2213db8e7ec0751890a8",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/test_source_transition_guard.py": "4ace92525ca1d2915acf40cc0a2bb02c555bb4ea568d315759ba9f30ff072b11",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py": "744825d465f8bdbb6c03b0c4977e33a0a51a3504cc37a5bc5ce85f256b6ff64b",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/map_repository_ownership.py": "1449dd8ce52049a240b79b9c0545d114e8da2f19426e62bd94fa5a0d19802ad5",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py": "a4ef91eef6de4904f5fc288e89e0305eb84f9e9db01b38fe05985f45e0426084",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/workspace.json": "ea3fc47ab8d1b947a324b7a33c5da629a317423563550205a376aa650619dd46",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/source-authority.json": "8911e6457de2fb40db32b134618fbea40f341b4861d1eecc8272adffb154a896"
+  },
+  "after_review_sha256": {
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py": "4565882ce40ab0a5db3b4a40a3451a36baa533527ddd2213db8e7ec0751890a8",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/test_source_transition_guard.py": "4ace92525ca1d2915acf40cc0a2bb02c555bb4ea568d315759ba9f30ff072b11",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py": "744825d465f8bdbb6c03b0c4977e33a0a51a3504cc37a5bc5ce85f256b6ff64b",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/map_repository_ownership.py": "1449dd8ce52049a240b79b9c0545d114e8da2f19426e62bd94fa5a0d19802ad5",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py": "a4ef91eef6de4904f5fc288e89e0305eb84f9e9db01b38fe05985f45e0426084",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/workspace.json": "ea3fc47ab8d1b947a324b7a33c5da629a317423563550205a376aa650619dd46",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/source-authority.json": "8911e6457de2fb40db32b134618fbea40f341b4861d1eecc8272adffb154a896"
+  },
+  "actual_snapshot": {
+    "guard_errors": [],
+    "expected_inputs": 92,
+    "original_baseline_rows": 52,
+    "derived_sources": 2,
+    "client_modules": 10,
+    "split_verification": {
+      "passed": true,
+      "local_git_repositories": 10,
+      "production_sources": 52,
+      "derived_production_sources": 2,
+      "errors": [],
+      "client_source_files": 10,
+      "remote_objects_created": 0,
+      "chain_cutovers": 0,
+      "not_proof_of": [
+        "business decoupling",
+        "deployed CI",
+        "independent upgrade authority",
+        "full product acceptance"
+      ]
+    },
+    "authority_map_original_sources": 52,
+    "authority_map_derived_sources": 2
+  },
+  "source_metadata_unchanged": true,
+  "existing_offline_controls": {
+    "passed": 43,
+    "total": 43
+  },
+  "temporary_controls": [
+    {
+      "control": "prior_whole_package_corrupted_frozen_recovery",
+      "expected": "reject",
+      "passed": true,
+      "errors": [
+        "Recovery input changed/missing/not regular: /tmp/source-transition-control-8j2_icl8/package-recovery/Move.toml",
+        "Recovery input changed/missing/not regular: /tmp/source-transition-control-8j2_icl8/package-recovery/source.move"
+      ]
+    },
+    {
+      "control": "prior_client_source_extractions_symlink",
+      "expected": "reject",
+      "passed": true,
+      "errors": [
+        "Recovery input changed/missing/not regular: /tmp/source-transition-control-9w4h8qwx/client.ts.recovery",
+        "Recovery input aliases mutable source: /tmp/source-transition-control-9w4h8qwx/client.ts"
+      ]
+    },
+    {
+      "control": "prior_client_source_extractions_samefile",
+      "expected": "reject",
+      "passed": true,
+      "errors": [
+        "Recovery input aliases mutable source: /tmp/source-transition-control-gu20yoy1/client.ts"
+      ]
+    },
+    {
+      "control": "prior_partial_extractions_symlink",
+      "expected": "reject",
+      "passed": true,
+      "errors": [
+        "Recovery input changed/missing/not regular: /tmp/source-transition-control-u5ks0bmg/content.move.recovery",
+        "Recovery input aliases mutable source: /tmp/source-transition-control-u5ks0bmg/content.move"
+      ]
+    },
+    {
+      "control": "prior_partial_extractions_samefile",
+      "expected": "reject",
+      "passed": true,
+      "errors": [
+        "Recovery input aliases mutable source: /tmp/source-transition-control-0vkrdizq/content.move"
+      ]
+    },
+    {
+      "control": "prior_latest_manifest_no_mutation",
+      "expected": "accept",
+      "passed": true,
+      "process_returncode": 0,
+      "stderr": "",
+      "build_exit_code": 0,
+      "test_exit_code": 0,
+      "baseline_preserved": true,
+      "input_errors_after_build": [],
+      "input_errors_after_test": [],
+      "install_dirs_present": true
+    },
+    {
+      "control": "prior_build_manifest",
+      "expected": "reject",
+      "passed": true,
+      "process_returncode": 1,
+      "stderr": "Build/test changed frozen inputs; failure evidence preserved: /tmp/source-transition-control-ix5gdkzd/workspace/build-evidence/prepared\n",
+      "build_exit_code": 0,
+      "test_exit_code": null,
+      "baseline_preserved": true,
+      "input_errors_after_build": [
+        "Missing/changed current input: /tmp/source-transition-control-ix5gdkzd/package/Move.toml"
+      ],
+      "input_errors_after_test": [
+        "Missing/changed current input: /tmp/source-transition-control-ix5gdkzd/package/Move.toml"
+      ],
+      "install_dirs_present": true
+    },
+    {
+      "control": "prior_test_lock",
+      "expected": "reject",
+      "passed": true,
+      "process_returncode": 1,
+      "stderr": "Build/test changed frozen inputs; failure evidence preserved: /tmp/source-transition-control-q3gs7p3h/workspace/build-evidence/prepared\n",
+      "build_exit_code": 0,
+      "test_exit_code": 0,
+      "baseline_preserved": true,
+      "input_errors_after_build": [],
+      "input_errors_after_test": [
+        "Missing/changed current input: /tmp/source-transition-control-q3gs7p3h/package/Move.lock"
+      ],
+      "install_dirs_present": true
+    },
+    {
+      "control": "ST3_failure_evidence_after_source_restore",
+      "expected": "activation rejects failed integrity evidence",
+      "passed": false,
+      "build_process_returncode": 1,
+      "build_stderr": "Build/test changed frozen inputs; failure evidence preserved: /private/tmp/source-transition-acceptance-recheck-ducdeu9t/workspace/build-evidence/soulidity_standard\n",
+      "evidence_build_exit_code": 0,
+      "evidence_test_exit_code": 0,
+      "input_errors_after_test": [
+        "Missing/changed current input: /private/tmp/source-transition-acceptance-recheck-ducdeu9t/workspace/soul-standard/move/soulidity_standard/Move.lock"
+      ],
+      "activation_accepted": true,
+      "activation_error": null,
+      "old_path_became_forwarding_locator": true
+    }
+  ],
+  "boundaries": {
+    "actual_sui_invocations": 0,
+    "network_operations": 0,
+    "chain_operations": 0,
+    "source_or_workspace_writes": 0,
+    "temporary_fixture_writes_only": true
+  },
+  "temporary_exception_controls": [
+    {
+      "control": "post_build_symlink_loop_exception",
+      "expected": "reject with structured failure evidence",
+      "passed": false,
+      "process_returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py\", line 80, in <module>\n    main()\n  File \"/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py\", line 46, in main\n    _, _, build_input_errors = source_inputs(state)\n  File \"/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py\", line 113, in source_inputs\n    path = str(Path(row['current_writer']).resolve())\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1205, in resolve\n    s = self._flavour.resolve(self, strict=strict)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 363, in resolve\n    return _resolve(base, str(path)) or sep\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 356, in _resolve\n    path = _resolve(path, target)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 344, in _resolve\n    raise RuntimeError(\"Symlink loop from %r\" % newpath)\nRuntimeError: Symlink loop from '/private/tmp/source-transition-exception-recheck-b8o8gvr_/package/sources/a.move'\n",
+      "raw_build_logs_preserved": true,
+      "structured_failure_evidence_preserved": false,
+      "workspace_evidence_pointer_preserved": false
+    },
+    {
+      "control": "post_test_symlink_loop_exception",
+      "expected": "reject with structured failure evidence",
+      "passed": false,
+      "process_returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py\", line 80, in <module>\n    main()\n  File \"/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py\", line 55, in main\n    _, _, final_input_errors = source_inputs(state)\n  File \"/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py\", line 113, in source_inputs\n    path = str(Path(row['current_writer']).resolve())\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1205, in resolve\n    s = self._flavour.resolve(self, strict=strict)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 363, in resolve\n    return _resolve(base, str(path)) or sep\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 356, in _resolve\n    path = _resolve(path, target)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 344, in _resolve\n    raise RuntimeError(\"Symlink loop from %r\" % newpath)\nRuntimeError: Symlink loop from '/private/tmp/source-transition-exception-recheck-css1ttpo/package/sources/a.move'\n",
+      "raw_build_logs_preserved": true,
+      "structured_failure_evidence_preserved": false,
+      "workspace_evidence_pointer_preserved": false
+    }
+  ],
+  "initial_findings_recheck": [
+    {
+      "id": "ST-1",
+      "priority": "P1",
+      "status": "resolved",
+      "evidence": "Active package baseline_inputs are checked through common recovery_input_errors; corrupted manifest and source fixture rejected; existing missing/symlink/samefile/hardlink controls pass."
+    },
+    {
+      "id": "ST-2",
+      "priority": "P1",
+      "status": "resolved",
+      "evidence": "Partial/client recovery now rejects symlinks and samefile/hardlink aliases through common recovery_input_errors; all four prior alias fixtures reject. SDK current10 canonical inputs enter expected before transition overlay."
+    },
+    {
+      "id": "ST-3",
+      "priority": "P1",
+      "status": "partially_resolved",
+      "evidence": "Builder now uses isolated install-dir and postbuild/posttest guard; prior build/test drift fixtures reject and preserve structured evidence. Downstream activation still accepts a recorded integrity failure after input bytes are restored."
+    }
+  ],
+  "findings": [
+    {
+      "id": "ST-3-acceptance",
+      "priority": "P1",
+      "title": "Activation accepts preserved failure evidence after current input recovery",
+      "locations": [
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py",
+          "start": 164,
+          "end": 166
+        },
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py",
+          "start": 59,
+          "end": 74
+        }
+      ],
+      "observed": "An offline fake tool mutates candidate Move.lock during test and returns0. Build runner exits1 and records nonempty input_errors_after_test but keeps exit_code0/test_exit_code0 and writes its workspace pointer. Restore Move.lock to baseline and activate accepts that same record, moves the original package into frozen-before and creates the forwarding locator; final verification succeeds.",
+      "required_fix": "Give evidence an explicit overall input-integrity/success result and reject failed integrity evidence in activate, including either nonempty post-tool error list. Add the restored-input consumer regression."
+    },
+    {
+      "id": "ST-3-exception",
+      "priority": "P2",
+      "title": "Post-tool guard exceptions skip structured failure evidence",
+      "locations": [
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py",
+          "start": 113,
+          "end": 113
+        },
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py",
+          "start": 46,
+          "end": 55
+        },
+        {
+          "file": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py",
+          "start": 68,
+          "end": 70
+        }
+      ],
+      "observed": "Replacing a registered production source with a self-referential symlink during build or test makes Path.resolve raise RuntimeError. Builder exits1 before evidence.json/pointer writes; raw logs remain. Both separate offline fixtures reproduce this. No unsafe success is observed in this exception case.",
+      "required_fix": "Convert filesystem/canonicalization failures into guard diagnostics, or catch post-tool guard exceptions and preserve structured failed evidence before nonzero exit. Keep failure evidence unavailable to activation."
+    }
+  ],
+  "control_counts": {
+    "existing_offline_controls": 43,
+    "existing_offline_passed": 43,
+    "prior_temporary_controls": 8,
+    "prior_temporary_controls_passed": 8,
+    "acceptance_followup_controls": 1,
+    "acceptance_followup_rejected_as_required": 0,
+    "exception_followup_controls": 2,
+    "exception_followup_structured_evidence_preserved": 0
+  },
+  "handbook": {
+    "version": "1.0",
+    "date": "2026-10-06",
+    "applicable_sections": [
+      "1\u20134",
+      "5",
+      "9",
+      "12"
+    ],
+    "stage": "Code/Build/Test offline scoped recheck",
+    "full_stage_exit_not_verified": true
+  },
+  "not_verified": [
+    "Actual Sui build behavior after tool fixes",
+    "Deployed/remote CI activation and immutable tool pins",
+    "Full security, business behavior, release/deploy and full ecosystem goal acceptance"
+  ],
+  "final_snapshot_sha256": {
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/source_transition_guard.py": "4565882ce40ab0a5db3b4a40a3451a36baa533527ddd2213db8e7ec0751890a8",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/test_source_transition_guard.py": "4ace92525ca1d2915acf40cc0a2bb02c555bb4ea568d315759ba9f30ff072b11",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/split_repositories.py": "744825d465f8bdbb6c03b0c4977e33a0a51a3504cc37a5bc5ce85f256b6ff64b",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/map_repository_ownership.py": "1449dd8ce52049a240b79b9c0545d114e8da2f19426e62bd94fa5a0d19802ad5",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/repository-extraction/build_repository_packages.py": "a4ef91eef6de4904f5fc288e89e0305eb84f9e9db01b38fe05985f45e0426084",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/workspace.json": "edac16040e3568a9ef0633decec0264836feb8ce0ec251c7ddd90591732a4b47",
+    "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/source-authority.json": "8911e6457de2fb40db32b134618fbea40f341b4861d1eecc8272adffb154a896"
+  },
+  "final_snapshot_same_as_reviewed": false,
+  "snapshot_note": "Reviewed before/after hashes were equal. Root began the follow-up fix after these checks; final_snapshot_same_as_reviewed false records that later revision. Reviewer source/metadata writes remain zero."
+}

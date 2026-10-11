@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "stage": "Code/Build/Test",
+  "exit_code": 0,
+  "controls": 43,
+  "positive_controls": 8,
+  "negative_controls": 35,
+  "current_tool_sha256": {
+    "source_transition_guard.py": "4565882ce40ab0a5db3b4a40a3451a36baa533527ddd2213db8e7ec0751890a8",
+    "test_source_transition_guard.py": "4ace92525ca1d2915acf40cc0a2bb02c555bb4ea568d315759ba9f30ff072b11",
+    "split_repositories.py": "744825d465f8bdbb6c03b0c4977e33a0a51a3504cc37a5bc5ce85f256b6ff64b",
+    "map_repository_ownership.py": "1449dd8ce52049a240b79b9c0545d114e8da2f19426e62bd94fa5a0d19802ad5",
+    "build_repository_packages.py": "a4ef91eef6de4904f5fc288e89e0305eb84f9e9db01b38fe05985f45e0426084"
+  },
+  "control_log_sha256": "52b82ef13e2913ff4cb9824f5e21c9c085992c4112101be647dc929c3ac1bb4c",
+  "baseline_sources": 52,
+  "original_current_bodies_unchanged": 47,
+  "original_current_bodies_transformed": 5,
+  "derived_retained_sources": 2,
+  "source_transitions_applied": 1,
+  "actual_client_source_locators": 10,
+  "actual_input_guards": 92,
+  "independent_review_initial": "source-transition-actual-review-20261010.json",
+  "review_findings": "3 scoped P1 findings fixed; independent recheck pending",
+  "limits": [
+    "Input integrity only; no semantic authority or runtime safety proof",
+    "Historical move/soulidity V8 excluded; original duty queue preserved",
+    "Original baseline hashes unchanged; transformations remain explicit"
+  ]
+}

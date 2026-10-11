@@ -1,0 +1,16 @@
+{
+  "control": "activation_two_prepared_packages",
+  "expected": "activate both successful packages",
+  "passed": true,
+  "build_process_returncode": 0,
+  "activation_accepted": true,
+  "activation_error": null,
+  "source_path_forwarders": [
+    true,
+    true
+  ],
+  "workspace_package_states": [
+    "active-source",
+    "active-source"
+  ]
+}

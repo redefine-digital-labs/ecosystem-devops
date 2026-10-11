@@ -1,0 +1,351 @@
+{
+  "status": "passed",
+  "check_count": 49,
+  "results": [
+    {
+      "repository": "ecosystem-devops",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"DEVOPS\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "ecosystem-devops",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "ecosystem-devops",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "ecosystem-devops",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "ecosystem-integration",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"INTEGRATION\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "ecosystem-integration",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "ecosystem-integration",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "ecosystem-integration",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "maker-protocol",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"MAKER\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "maker-protocol",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "maker-protocol",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "maker-protocol",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "soul-channel",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"CHANNEL\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-channel",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "soul-channel",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "soul-channel",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "soul-community",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"COMMUNITY\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-community",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "soul-community",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "soul-community",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"CONTENT\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "packages/soulidity_content/sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"CONTENT\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "packages/soulidity_standard",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: packages/soulidity_standard\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "packages/soulidity_standard/sources/dependency.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: packages/soulidity_standard/sources/dependency.move\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "packages/soulidity_foundation",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: packages/soulidity_foundation\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "packages/soulidity_foundation/sources/dependency.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: packages/soulidity_foundation/sources/dependency.move\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "offline-vendor",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: offline-vendor\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "offline-vendor/sources/dependency.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: offline-vendor/sources/dependency.move\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "frozen-original",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: frozen-original\n"
+    },
+    {
+      "repository": "soul-content",
+      "changed_path": "frozen-original/sources/dependency.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: frozen-original/sources/dependency.move\n"
+    },
+    {
+      "repository": "soul-extensions",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"EXTENSIONS\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-extensions",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "soul-extensions",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "soul-extensions",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "soul-market",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"MARKET\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-market",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "soul-market",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "soul-market",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "soul-sdk",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"SDK\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-sdk",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "soul-sdk",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "soul-sdk",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    },
+    {
+      "repository": "soul-standard",
+      "changed_path": "sources/owned.move",
+      "returncode": 0,
+      "stdout": "{\"module\": \"STANDARD\", \"maintenance_contract\": \"passed\", \"product_checks\": \"not_run_by_this_command\", \"release_materials\": \"not_checked\", \"remote_execution_or_deployment_verified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "repository": "soul-standard",
+      "changed_path": ".deps/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: .deps/source.move\n"
+    },
+    {
+      "repository": "soul-standard",
+      "changed_path": "candidate-dependencies/source.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: candidate-dependencies/source.move\n"
+    },
+    {
+      "repository": "soul-standard",
+      "changed_path": "evidence/extraction-original/baseline.move",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "module check failed: changed path is read-only: evidence/extraction-original/baseline.move\n"
+    }
+  ],
+  "product_checks": "not_run",
+  "shared_roots_written": false
+}

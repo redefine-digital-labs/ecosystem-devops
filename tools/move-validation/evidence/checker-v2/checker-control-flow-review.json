@@ -1,0 +1,176 @@
+{
+  "scope": "isolated subprocess mock + real checker argument rejection; no Sui execution, Move compile/tests, RPC/signing or shared writes",
+  "checker_source": "/Users/naoer/Documents/Claude/Projects/soulidity-ecosystem/ecosystem-devops/tools/move-validation/verify_move_packages.py",
+  "checker_sha256": "cabf2ce563b65db3f91295209eefda08d8947dfc1119fc5db286ae50c8e344e1",
+  "all_matched": true,
+  "results": [
+    {
+      "case": "baseline",
+      "expected_exit": 0,
+      "exit_code": 0,
+      "matched": true,
+      "result": "PASS",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "build_failure",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 1,
+      "test_exit": null
+    },
+    {
+      "case": "test_failure_exit",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 1
+    },
+    {
+      "case": "missing_summary",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "incomplete_summary",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "failed_test",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "inconsistent_counts",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "below_minimum",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "zero_tests",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "changed_source",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": false,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "added_source",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": false,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "deleted_source",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": false,
+      "build_exit": 0,
+      "test_exit": 0
+    },
+    {
+      "case": "build_timeout",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 124,
+      "test_exit": null
+    },
+    {
+      "case": "test_timeout",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "matched": true,
+      "result": "FAIL",
+      "source_and_manifest_unchanged": true,
+      "build_exit": 0,
+      "test_exit": 124
+    },
+    {
+      "case": "wrong_cli_pin",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "matched": true,
+      "diagnostic": "verify_move_packages.py: error: SUI_BINARY/--sui must identify the exact pinned CLI SHA256"
+    },
+    {
+      "case": "negative_minimum",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "matched": true,
+      "diagnostic": "verify_move_packages.py: error: --minimum-tests must be nonnegative"
+    },
+    {
+      "case": "outside_repository",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "matched": true,
+      "diagnostic": "verify_move_packages.py: error: Package must be an owned in-repository directory"
+    },
+    {
+      "case": "missing_manifest",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "matched": true,
+      "diagnostic": "verify_move_packages.py: error: Missing package manifest: move/missing"
+    }
+  ]
+}

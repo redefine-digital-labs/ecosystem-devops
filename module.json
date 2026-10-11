@@ -43,12 +43,21 @@
     }
   },
   "artifact_state": {
-    "repository_creation": "local_git_created; no remote or commit",
+    "repository_creation": "public_remote_created; source_checkpoint_pushed_and_verified",
     "source_migration": "Extraction tools/template generator and common CI sole authority in this repository;10 pinned CI copies installed",
     "build": "Maintenance106 controls/10 installed structural CI passed; source integrity52 controls and actual92 guards passed",
     "runtime_acceptance": "not_run",
     "independent_deployment": "not_verified",
-    "remote_ci_execution": "not_run"
+    "remote_ci_execution": "not_run",
+    "remote_backup": {
+      "url": "https://github.com/redefine-digital-labs/ecosystem-devops",
+      "visibility": "PUBLIC",
+      "default_branch": "main",
+      "verified_source_commit": "a1763f932fbc2c5895fc3580d1d552e276a8beb0",
+      "source_checkpoint_verified": true,
+      "actions_enabled": false,
+      "scope": "Source backup; independent product/release/runtime status remains as separately recorded"
+    }
   },
   "management": {
     "functions": [
